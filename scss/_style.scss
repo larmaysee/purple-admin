@@ -1,0 +1,69 @@
+@import "purple-admin-variables";
+
+body {
+  font-family: 'Raleway',
+    sans-serif;
+  font-weight: normal;
+}
+
+.bg-light {
+  background: $light;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+.page-wrapper {
+  .sidebar {
+    background: linear-gradient(to bottom, #3c1e84, #4d2c9a, #5f3bb1, #704ac9, #825ae1);
+    height: 100vh;
+    width: 280px;
+    position: relative;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .sidebar-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      .logo {
+        display: inline;
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 10px;
+      }
+
+      .logo-txt {
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+
+        .site-title {
+          color: #ab94e2;
+        }
+
+        .site-subtitle {
+          color: #825ae1;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .content {
+    min-width: 100%;
+    padding-left: 280px;
+  }
+}
