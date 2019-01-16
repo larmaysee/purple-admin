@@ -8618,7 +8618,7 @@ h3 {
 * LMS
 */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
 }
 
@@ -8630,8 +8630,15 @@ body {
   color: #37445C;
 }
 
+.page-wrapper .header.topbar {
+  width: 100%;
+  padding-left: 280px;
+}
+.page-wrapper .header .navbar-nav .nav-item .nav-link i {
+  font-weight: bold;
+}
 .page-wrapper .sidebar {
-  background: linear-gradient(to bottom, #3c1e84, #4d2c9a, #5f3bb1, #704ac9, #825ae1);
+  background-image: linear-gradient(to bottom, #3c1e84, #442391, #4d279e, #562cab, #5f31b9);
   height: 100vh;
   width: 280px;
   position: relative;
@@ -8673,6 +8680,10 @@ body {
 .page-wrapper .content {
   min-width: 100%;
   padding-left: 280px;
+}
+.page-wrapper .content .content-wrapper {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
