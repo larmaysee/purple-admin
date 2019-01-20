@@ -1,69 +1,74 @@
 @import "purple-admin-variables";
 
 body {
-  font-family: 'Raleway',
-    sans-serif;
-  font-weight: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
 }
 
 .bg-light {
-  background: $light;
+	background: $light;
 }
 
 .dark-blue {
-  color: $dark-blue;
+	color: $dark-blue;
 }
 
 .page-wrapper {
-  .sidebar {
-    background: linear-gradient(to bottom, #3c1e84, #4d2c9a, #5f3bb1, #704ac9, #825ae1);
-    height: 100vh;
-    width: 280px;
-    position: relative;
+	.header {
+		width: 100%;
+		padding-left: 280px;
+	}
 
-    &.fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-    }
+	.sidebar {
+		background: linear-gradient(to bottom, #3c1e84, #4d2c9a, #5f3bb1, #704ac9, #825ae1);
+		height: 100vh;
+		width: 280px;
+		position: relative;
 
-    .sidebar-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 16px;
-      padding-right: 16px;
+		&.fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+		}
 
-      .logo {
-        display: inline;
-        text-align: center;
-        padding-top: 16px;
-        padding-bottom: 10px;
-      }
+		.sidebar-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: 16px;
+			padding-right: 16px;
 
-      .logo-txt {
-        font-weight: bold;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 16px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+			.logo {
+				display: inline;
+				text-align: center;
+				padding-top: 16px;
+				padding-bottom: 10px;
+			}
 
-        .site-title {
-          color: #ab94e2;
-        }
+			.logo-txt {
+				font-weight: bold;
+				align-items: center;
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 16px;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 
-        .site-subtitle {
-          color: #825ae1;
-          font-size: 14px;
-        }
-      }
-    }
-  }
+				.site-title {
+					color: #ab94e2;
+				}
 
-  .content {
-    min-width: 100%;
-    padding-left: 280px;
-  }
+				.site-subtitle {
+					color: #825ae1;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.content {
+		min-width: 100%;
+		padding-left: 280px;
+		padding-top: 20px;
+	}
 }

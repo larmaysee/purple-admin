@@ -8618,7 +8618,7 @@ h3 {
 * LMS
 */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
 }
 
@@ -8630,6 +8630,10 @@ body {
   color: #37445C;
 }
 
+.page-wrapper .header {
+  width: 100%;
+  padding-left: 280px;
+}
 .page-wrapper .sidebar {
   background: linear-gradient(to bottom, #3c1e84, #4d2c9a, #5f3bb1, #704ac9, #825ae1);
   height: 100vh;
@@ -8673,6 +8677,7 @@ body {
 .page-wrapper .content {
   min-width: 100%;
   padding-left: 280px;
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
