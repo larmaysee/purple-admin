@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Purple Admin</title>
-  <link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="./dist/fontawesome/css/all.css">
+  <link rel="stylesheet" href="./dist/css/style.css" />
 </head>
 
-<body>
+<body class="fixed-topbar fixed-siebar">
   <div class="page-wrapper">
     <div class="topbar header shadow-sm">
       <nav class="navbar navbar-expand-md">
         <div class="navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="icon-arrow-down"></i></a>
+              <a class="nav-link toggler" href="#"><i class=" icon-directions"></i></a>
             </li>
           </ul>
           <ul class="navbar-nav my-lg-0">
@@ -32,31 +33,197 @@
         </div>
       </nav>
     </div>
-    <div class="sidebar fixed">
+    <div class="sidebar">
       <div class="sidebar-header">
         <div class="logo">
-          <img src="./dist/img/man-256.png" alt="" class="img-circle" width="50">
+          <img src="./dist/img/man-256.png" alt="" class="img-circle" width="50" />
         </div>
         <div class="logo-txt">
           <span class="site-title">Purple Admin</span>
           <span class="site-subtitle">@LarMaySee</span>
         </div>
       </div>
+      <div class="divider-wrap">
+        <div class="divider"></div>
+      </div>
+      <div class="sidebar-content">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#">
+              <span class="menu-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </span>
+              <span class="hide-menu">
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="menu-icon"><i class="fab fa-wpforms"></i></span>
+              <span class="hide-menu">
+                Form
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="menu-icon">
+                <i class="fas fa-cube"></i>
+              </span>
+              <span class="hide-menu">
+                Components
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="far fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-lock"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="content">
       <div class="content-wrapper">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <button class="btn btn-danger">Button Danger</button>
-              <button class="btn btn-warning">Button Danger</button>
-              <button class="btn btn-success">Success</button>
-              <button class="btn btn-info">Info</button>
-            </div>
-            <div class="col-6">
-              <button class="btn btn-primary">Button Primary</button>
-              <button class="btn btn-secondary">Button Secondary</button>
-              <h3 class="dark-blue">Dark Blue Coloe</h3>
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <button class="btn btn-danger">Button Danger</button>
+                  <button class="btn btn-warning">Button Danger</button>
+                  <button class="btn btn-success">Success</button>
+                  <button class="btn btn-info">Info</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-primary">Button Primary</button>
+                  <button class="btn btn-secondary">Button Secondary</button>
+                  <h3 class="dark-blue">Dark Blue Coloe</h3>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+              </div>
             </div>
           </div>
         </div>
