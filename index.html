@@ -2,157 +2,234 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Purple Admin</title>
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<!-- simple line icon -->
-	<link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css">
-	<link rel="stylesheet" href="./dist/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Purple Admin</title>
+  <link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="./dist/fontawesome/css/all.css">
+  <link rel="stylesheet" href="./dist/css/style.css" />
 </head>
 
-<body>
-	<div class="page-wrapper">
-		<div class="header">
-			<nav class="navbar navbar-expand-md shadow-sm">
-				<a class="navbar-brand" href="#"><i class="icon-menu"></i></a>
-				<!-- right -->
-				<ul class="navbar-nav my-lg-0">
-					<!-- full screen acter -->
-					<li class="nav-item active">
-						<a class="nav-link waves-effect waves-block" href="javascript:void(0)" full-screen id="fullscreen"><span class="fas fa-arrows-alt"></span>
-						</a>
-					</li>
-
-					<!-- notification -->
-					<li class="nav-item dropdown" boot-dropdown>
-						<a class="nav-link waves-effect waves-block" href="javascript:void(0)" id="notiDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-							<span class="far fa-bell"></span>
-							<span class="badge badge-pill notification badge-danger">50</span>
-						</a>
-
-						<div class="dropdown-menu dropdown-menu-right nav-dropdown animated lightSpeedIn border-0" aria-labelledby="notiDropdown">
-							<span class="with-arrow"><span class="bg-danger"></span></span>
-							<div class="nav-dropdown-header bg-danger">
-								<span class="circle bg-danger"></span>
-								<div class="ml-2">
-									<h4 class="mb-0">5 New</h4>
-									<span class="mb-0">Notification</span>
-								</div>
-							</div>
-							<div class="nav-dropdown-body" perfect-scroll>
-								<a class="dropdown-item mt-3" href="#">
-									<span class="bg-success btn btn-circle text-white">
-										<b><i class="ti ti-user align-middle"></i></b>
-									</span>
-									<div class="noti-content ml-2">
-										<p class="mb-0"><b>Greate Hit Songs</b></p>
-										<p class="text-mute mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-									</div>
-								</a>
-								<a class="dropdown-item" href="#">
-									<span class="bg-warning btn btn-circle text-white">
-										<b><i class="ti ti-email align-middle"></i></b>
-									</span>
-									<div class="noti-content ml-2">
-										<p class="mb-0"><b>Greate Hit Songs</b></p>
-										<p class="text-mute mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-									</div>
-								</a>
-								<a class="dropdown-item" href="#">
-									<span class="bg-info btn btn-circle text-white">
-										<b><i class="ti ti-info-alt align-middle"></i></b>
-									</span>
-									<div class="noti-content ml-2">
-										<p class="mb-0"><b>Greate Hit Songs</b></p>
-										<p class="text-mute mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-									</div>
-								</a>
-								<a class="dropdown-item" href="#">
-									<span class="bg-danger btn btn-circle text-white">
-										<b><i class="ti ti-bell align-middle"></i></b>
-									</span>
-									<div class="noti-content ml-2">
-										<p class="mb-0"><b>Greate Hit Songs</b></p>
-										<p class="text-mute mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-									</div>
-								</a>
-								<a class="dropdown-item" href="#">
-									<span class="bg-primary btn btn-circle text-white">
-										<b><i class="ti ti-agenda align-middle"></i></b>
-									</span>
-									<div class="noti-content ml-2">
-										<p class="mb-0"><b>Greate Hit Songs</b></p>
-										<p class="text-mute mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis</p>
-									</div>
-								</a>
-							</div>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item mb-3" href="#"><b><i class="ti ti-arrow-right"></i></b> Show Message</a>
-						</div>
-					</li>
-					<!-- user profile -->
-					<li class="nav-item dropdown user-profile" boot-dropdown>
-						<a class="nav-link dropdown-toggle waves-effect" href="javascript:void(0)" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-							<img src="assets/img/profile.png" alt="" width="30">
-						</a>
-						<div class="dropdown-menu  nav-dropdown dropdown-menu-right animated flipInY border-0" aria-labelledby="userDropdown">
-							<span class="with-arrow"><span class="bg-blue"></span></span>
-							<div class="nav-dropdown-header">
-								<img src="assets/img/profile.png" alt="" width="50">
-								<div class="ml-2">
-									<h4 class="mb-0">JOSHUA</h4>
-									<span class="mb-0">joshua@mytel.com.mm</span>
-								</div>
-							</div>
-							<a class="dropdown-item mt-3" href="#"><i class="ti ti-user"></i> My Profile</a>
-							<a class="dropdown-item" href="#"><i class="ti ti-email"></i> My Inbox</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#"><i class="ti ti-lock"></i> Account Settings</a>
-							<a class="dropdown-item" href="#"><i class="ti ti-agenda"></i> Calendar </a>
-							<a class="dropdown-item" href="#"><i class="ti ti-bookmark"></i> Bookmark </a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item mb-3" href="#"><b><i class="ti ti-power-off"></i></b> Logout</a>
-						</div>
-					</li>
-
-					<!-- setting rightside -->
-					<li class="nav-item">
-						<a class="nav-link waves-effect waves-block" href="javascript:void(0)" toggle-right-sidebar><span class="fas fa-cog"></span></a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="sidebar fixed">
-			<div class="sidebar-header">
-				<div class="logo">
-					<img src="./dist/img/man-256.png" alt="" class="img-circle" width="50">
-				</div>
-				<div class="logo-txt">
-					<span class="site-title">Purple Admin</span>
-					<span class="site-subtitle">@LarMaySee</span>
-				</div>
-			</div>
-		</div>
-		<div class="content">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<button class="btn btn-danger">Button Danger</button>
-						<button class="btn btn-warning">Button Danger</button>
-						<button class="btn btn-success">Success</button>
-						<button class="btn btn-info">Info</button>
-					</div>
-					<div class="col-6">
-						<button class="btn btn-primary">Button Primary</button>
-						<button class="btn btn-secondary">Button Secondary</button>
-						<h3 class="dark-blue">Dark Blue Coloe</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<body class="fixed-topbar fixed-siebar">
+  <div class="page-wrapper">
+    <div class="topbar header shadow-sm">
+      <nav class="navbar navbar-expand-md">
+        <div class="navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link toggler" href="#"><i class=" icon-directions"></i></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="icon-magnifier"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="icon-options-vertical"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <img src="./dist/img/man-256.png" alt="" class="img-circle" width="50" />
+        </div>
+        <div class="logo-txt">
+          <span class="site-title">Purple Admin</span>
+          <span class="site-subtitle">@LarMaySee</span>
+        </div>
+      </div>
+      <div class="divider-wrap">
+        <div class="divider"></div>
+      </div>
+      <div class="sidebar-content">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#">
+              <span class="menu-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </span>
+              <span class="hide-menu">
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="menu-icon"><i class="fab fa-wpforms"></i></span>
+              <span class="hide-menu">
+                Form
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="menu-icon">
+                <i class="fas fa-cube"></i>
+              </span>
+              <span class="hide-menu">
+                Components
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="far fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-lock"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <button class="btn btn-danger">Button Danger</button>
+                  <button class="btn btn-warning">Button Danger</button>
+                  <button class="btn btn-success">Success</button>
+                  <button class="btn btn-info">Info</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-primary">Button Primary</button>
+                  <button class="btn btn-secondary">Button Secondary</button>
+                  <h3 class="dark-blue">Dark Blue Coloe</h3>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Placeat a sequi, repellat neque porro corrupti, maxime fuga
+                  ut voluptate accusantium quidem quos earum unde ab
+                  asperiores, mollitia aliquam officia! Est.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
