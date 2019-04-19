@@ -1,0 +1,173 @@
+// 2018-11-14 13:08:58
+// social widget
+
+// icon stack widget
+.b-none {
+  border: none;
+}
+
+.i-s-widget {
+  display: flex;
+
+  &.i-s-row {
+    flex-direction: row;
+
+    .i-s-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 30px;
+      flex-basis: 45%;
+
+      .icon-fa {
+        font-size: 28px;
+        align-self: center;
+      }
+    }
+
+    .i-s-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 4px;
+
+      .i-s-item {
+        padding: 16px;
+      }
+
+      .b-name {
+        font-size: $font-size;
+      }
+
+      .b-value {
+        font-size: 23px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.i-s-column {
+    flex-direction: column;
+
+    .i-s-icon {
+      border-bottom: 1px solid #e9e9e9;
+    }
+  }
+
+  .i-s-block {
+    flex-basis: 100%;
+  }
+
+  // facebook
+  .i-s-facebook {
+    background: #3B5999;
+    color: #ffffff;
+  }
+
+  .i-s-messeger {
+    background: #0084ff;
+    color: #ffffff;
+  }
+
+  .i-s-twitter {
+    background: #55acee;
+    color: #ffffff;
+  }
+
+  .i-s-snapchat {
+    background: #ede718;
+    color: #353533;
+  }
+
+  .i-s-youtube {
+    background: #cd201f;
+    color: #ffffff;
+  }
+
+  .i-s-dropbox {
+    background: #007ee5;
+    color: #ffffff;
+  }
+}
+
+
+.card-widget {
+  .widget-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .widget-header {
+    display: flex;
+    justify-content: space-between;
+
+    .widget-left,
+    .widget-right,
+    .widget-center {
+      max-width: 100%;
+    }
+
+    .widget-left,
+    .widget-right {
+      color: #a9a9a9;
+
+      a {
+        cursor: pointer;
+      }
+    }
+
+    .widget-left {
+      padding: .5rem 0rem;
+    }
+  }
+}
+
+.r-t {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .r-t-icon {
+    font-size: 20px;
+  }
+
+  .r-t-name {
+    color: #b9b9b9;
+  }
+
+}
+
+// report site visit
+.r-s-v {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .r-s-name {
+    color: rgba($white, 0.7);
+    font-size: inherit;
+  }
+
+  .r-s-icon {
+    color: rgba($white, 0.7);
+    font-size: 30px;
+  }
+
+  .r-s-value {
+    color: rgba($color: $white, $alpha: 0.9);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+}
+
+
+// card widget
+.widget-title {
+  font-size: $font-size;
+}
+
+.border-divider {
+  width: 1px;
+  background-color: #e9e9d9;
+}

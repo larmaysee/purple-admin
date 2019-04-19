@@ -3,7 +3,11 @@
 * LMS
 */
 
-$primary: #765AD3;
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500');
+$font-family-serif: 'Rubik',
+sans-serif;
+
+$primary: #6b4ece;
 $info: #58C2D6;
 $danger:#da4949;
 $success:#11bf77;
@@ -19,3 +23,7 @@ $midnight:#3C1E84;
 $darkorchid: #5F31B9;
 
 $white:#fff;
+
+$font-size: 14px;
+$font-size-28: 28px;
+$grid-gutter-width: 16px;

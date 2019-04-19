@@ -1,11 +1,11 @@
 @import "purple-admin-variables";
 
 body {
-	font-family: 'Lato',
-		sans-serif;
+	font-family: $font-family-serif;
 	font-weight: normal;
 	background: #f0f0f0;
 	color: #525252;
+	font-size: $font-size;
 }
 
 .bg-light {
@@ -30,6 +30,8 @@ body {
 		&.topbar {
 			width: 100%;
 			padding-left: 250px;
+			transition: ease 1s;
+
 
 			.navbar {
 				background: #ffffff;
@@ -70,6 +72,10 @@ body {
 			flex-direction: row;
 			padding: 16px 20px 0px;
 
+			.logo-img {
+				width: 50px;
+			}
+
 			.site-title {
 				color: #ab94e2;
 			}
@@ -86,8 +92,9 @@ body {
 				}
 
 				.site-subtitle {
-					color: #e1e6e1;
+					color: #b95de4;
 					font-size: 14px;
+					font-weight: 500;
 				}
 			}
 		}
@@ -102,23 +109,27 @@ body {
 				li {
 					a {
 						padding: 10px 20px;
-						font-size: 16px;
 						display: inherit;
 						color: #c7b0e6;
 						border-right: 3px solid transparent;
-						transition: all 0.5s;
+						transition: 0.5s;
 
+						&.active {
+							text-decoration: none;
+							color: $white;
+							border-right: 3px solid $primary;
+							transition: 0.5s;
+						}
 
 						span.menu-icon {
 							font-weight: bold;
-							margin-right: 16px;
 						}
 
 						&:hover {
 							text-decoration: none;
 							color: $white;
 							border-right: 3px solid $primary;
-							transition: all 0.5s;
+							transition: 0.5s;
 						}
 					}
 				}
@@ -131,8 +142,7 @@ body {
 			left: 0;
 			right: 0;
 			max-width: 250px;
-			border-top: 1px solid rgba(255, 255, 255, 0.09);
-			background: $midnight;
+			background: rgba(0, 0, 0, 0.2);
 
 			ul {
 				list-style: none;
@@ -144,9 +154,9 @@ body {
 
 				li {
 					a {
-						padding: 20px;
+						padding: 15px 20px;
 						display: inherit;
-						color: #c7b0e6;
+						color: #a088ab;
 
 						&:hover {
 							color: $white;
@@ -160,11 +170,8 @@ body {
 	.content {
 		min-width: 100%;
 		padding-left: 250px;
+		transition: ease 1s;
 
-		.content-wrapper {
-			padding-top: 16px;
-			padding-bottom: 16px;
-		}
 	}
 }
 
@@ -190,6 +197,100 @@ body.fixed-topbar {
 	}
 
 	.content {
-		padding-top: 56px;
+		padding-top: 65px;
+
+		.content-wrapper {
+			padding-left: 8px;
+			padding-right: 8px;
+			min-height: 530px;
+		}
+	}
+}
+
+.hideSidebar {
+	padding-left: 0 !important;
+	transition: ease 1s;
+}
+
+// media screen for large
+@media screen and (min-width: 1441px) {
+	$padding: 20px 32px;
+
+	body {
+		font-size: $font-size-28;
+	}
+
+	.container-fluid {
+		padding: $padding;
+	}
+
+	.divider-wrap {
+		padding: 32px 40px;
+	}
+
+	.page-wrapper {
+
+		.header {
+			&.topbar {
+				width: 100%;
+				padding-left: 450px;
+
+				.navbar {
+					background: #ffffff;
+					padding: $padding;
+				}
+			}
+		}
+
+
+		.sidebar {
+			width: 450px;
+
+			.sidebar-header {
+				padding: 32px 40px;
+
+				.logo-img {
+					width: 100px;
+				}
+
+				.logo-txt {
+					.site-title {
+						font-size: 40px;
+					}
+
+					.site-subtitle {
+						font-size: $font-size-28;
+					}
+				}
+			}
+
+			.sidebar-content {
+				.sidebar-menu {
+					li a {
+						padding: 20px 40px;
+					}
+				}
+			}
+
+			.sidebar-footer {
+				max-width: 450px;
+			}
+		}
+
+		.content {
+			min-width: 100%;
+			padding-left: 450px;
+
+			.content-wrapper {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
+	}
+
+	body.fixed-topbar {
+		.content {
+			padding-top: 98px;
+		}
 	}
 }

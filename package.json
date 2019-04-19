@@ -1,0 +1,35 @@
+{
+  "name": "purple-admin",
+  "version": "1.0.0",
+  "description": "Admin template with angularjs",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "flatpickr": "^4.5.7",
+    "jquery": "^3.4.0",
+    "simple-line-icons": "^2.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^0.7.4",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-minified": "^0.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "admin",
+    "dashboard",
+    "template",
+    "html",
+    "purple",
+    "purple-admin"
+  ],
+  "author": "Pyramid Tech",
+  "license": "ISC"
+}
