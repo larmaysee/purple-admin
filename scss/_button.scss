@@ -1,0 +1,76 @@
+button[class^="btn-outline-"] {
+	border: 2px solid transparent;
+}
+
+.btn {
+	font-size: $font-size;
+	transition: ease 0.5s;
+
+	.li-icon {
+		font-weight: 500;
+		vertical-align: middle;
+	}
+
+	.li-text-icon {
+		padding-right: 5px;
+	}
+
+	//round
+	&.btn-round {
+		transition: ease 0.5s;
+		border-radius: 44px;
+
+		// hover not round from round.
+		&.btn-h-noround:hover {
+			transition: ease 0.5s;
+			border-radius: 4px;
+		}
+	}
+
+	//focus
+	&:focus,
+	&.focus {
+		outline: 0;
+	}
+
+	// hover round
+	&.btn-h-round:hover {
+		border-radius: 44px;
+		transition: ease 0.5s;
+	}
+
+	//btn circle
+	&.btn-circle-sm {
+		width: 40px;
+		height: 40px;
+		border-radius: 44px;
+		overflow: hidden;
+	}
+
+	&.btn-circle {
+		width: 50px;
+		height: 50px;
+		border-radius: 44px;
+		overflow: hidden;
+	}
+
+	&.btn-circle-lg {
+		width: 60px;
+		height: 60px;
+		border-radius: 44px;
+		overflow: hidden;
+	}
+
+}
+
+
+
+
+@media screen and (min-width: 1441px) {
+	$padding: 10px 20px;
+
+	.btn {
+		font-size: $font-size-28;
+		padding: $padding;
+	}
+}

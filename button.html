@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Purple Admin</title>
+	<link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="./dist/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="./dist/css/purple.min.css" />
+	<link rel="stylesheet" href="./dist/css/animate.css" />
+</head>
+
+<body class="fixed-topbar fixed-siebar">
+	<div class="page-wrapper">
+		<div class="topbar header shadow-sm animated" id="topbar">
+			<nav class="navbar navbar-expand">
+				<div class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link toggler" href="#" onclick="app.toggleSidebar(this)"><i class="fas fa-align-left"></i></a>
+						</li>
+					</ul>
+					<ul class="navbar-nav my-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu search-dropdown-box dropdown-menu-right border-0 shadow-sm" aria-labelledby="search-dropdown">
+								<div class="pl-2 pr-2">
+									<input type="search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="topbar-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+								<i class="icon-options-vertical"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topbar-dropdown">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Setting</a>
+								<a class="dropdown-item" href="#">
+									Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar animated">
+			<div class="sidebar-header">
+				<div class="logo">
+					<img src="./dist/img/man-256.png" alt="" class="img-circle logo-img" />
+				</div>
+				<div class="logo-txt">
+					<span class="site-title">Purple Admin</span>
+					<span class="site-subtitle">@LarMaySee</span>
+				</div>
+			</div>
+			<div class="divider-wrap">
+				<div class="divider"></div>
+			</div>
+			<div class="sidebar-content">
+				<ul class="sidebar-menu">
+					<li>
+						<a href="demo.html" class="active">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-tachometer-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="form.html">
+							<span class="menu-icon mr-3"><i class="fab fa-wpforms"></i></span>
+							<span class="hide-menu">
+								Form
+							</span>
+						</a>
+					</li>
+					<li class="selected">
+						<a href="#" class="active">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-cube"></i>
+							</span>
+							<span class="hide-menu">
+								Components
+							</span>
+							<span class="menu-icon float-right arrow">
+								<i class="fas fa-angle-right"></i>
+							</span>
+						</a>
+						<ul class="submenu">
+							<li class="nav-item">
+								<a href="alert.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Alert
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="badge.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Badge
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="button.html" class="nav-link active">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Button
+									</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="fontawesome.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-feather-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Fontawesome
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="simplelineicon.html">
+							<span class="menu-icon mr-3">
+								<i class="fab fa-pagelines"></i>
+							</span>
+							<span class="hide-menu">
+								Simpleline Icons
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="flatpicker.html">
+							<span class="menu-icon mr-3">
+								<i class="far fa-calendar"></i>
+							</span>
+							<span class="hide-menu">
+								Flatpkr
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-lock"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-cog"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content animated" id="main-content">
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="card border-0 shadow-sm">
+						<div class="card-header">
+							<h3 class="card-title mb-0">Button Components</h3>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-12">
+									<h3 class="card-title mb-3">Default Button</h3>
+									<button type="button" class="btn btn-primary">Primary</button>
+									<button type="button" class="btn btn-secondary">Secondary</button>
+									<button type="button" class="btn btn-success">Success</button>
+									<button type="button" class="btn btn-danger">Danger</button>
+									<button type="button" class="btn btn-warning">Warning</button>
+									<button type="button" class="btn btn-info">Info</button>
+									<button type="button" class="btn btn-light">Light</button>
+									<button type="button" class="btn btn-dark">Dark</button>
+									<button type="button" class="btn btn-link">Link</button>
+								</div>
+							</div>
+							<div class="row mt-5">
+								<div class="col-12">
+									<h3 class="card-title mb-3">Outline Button</h3>
+									<button type="button" class="btn btn-outline-primary">Primary</button>
+									<button type="button" class="btn btn-outline-secondary">Secondary</button>
+									<button type="button" class="btn btn-outline-success">Success</button>
+									<button type="button" class="btn btn-outline-danger">Danger</button>
+									<button type="button" class="btn btn-outline-warning">Warning</button>
+									<button type="button" class="btn btn-outline-info">Info</button>
+									<button type="button" class="btn btn-outline-light">Light</button>
+									<button type="button" class="btn btn-outline-dark">Dark</button>
+								</div>
+							</div>
+							<div class="row mt-5">
+								<div class="col-12">
+									<h3 class="card-title mb-3">Hover Round Button</h3>
+									<button type="button" class="btn btn-h-round btn-primary">Primary</button>
+									<button type="button" class="btn btn-h-round btn-secondary">Secondary</button>
+									<button type="button" class="btn btn-h-round btn-success">Success</button>
+									<button type="button" class="btn btn-h-round btn-danger">Danger</button>
+									<button type="button" class="btn btn-h-round btn-warning">Warning</button>
+									<button type="button" class="btn btn-h-round btn-info">Info</button>
+									<button type="button" class="btn btn-h-round btn-light">Light</button>
+									<button type="button" class="btn btn-h-round btn-dark">Dark</button>
+								</div>
+								<div class="col-12 mt-5">
+									<button type="button" class="btn btn-h-round btn-outline-primary">Primary</button>
+									<button type="button" class="btn btn-h-round btn-outline-secondary">Secondary</button>
+									<button type="button" class="btn btn-h-round btn-outline-success">Success</button>
+									<button type="button" class="btn btn-h-round btn-outline-danger">Danger</button>
+									<button type="button" class="btn btn-h-round btn-outline-warning">Warning</button>
+									<button type="button" class="btn btn-h-round btn-outline-info">Info</button>
+									<button type="button" class="btn btn-h-round btn-outline-light">Light</button>
+									<button type="button" class="btn btn-h-round btn-outline-dark">Dark</button>
+								</div>
+							</div>
+
+							<div class="row mt-5">
+								<div class="col-12">
+									<h3 class="card-title mb-3">Round Button</h3>
+									<button type="button" class="btn btn-round btn-primary">Primary</button>
+									<button type="button" class="btn btn-round btn-secondary">Secondary</button>
+									<button type="button" class="btn btn-round btn-success">Success</button>
+									<button type="button" class="btn btn-round btn-danger">Danger</button>
+									<button type="button" class="btn btn-round btn-warning">Warning</button>
+									<button type="button" class="btn btn-round btn-info">Info</button>
+									<button type="button" class="btn btn-round btn-light">Light</button>
+									<button type="button" class="btn btn-round btn-dark">Dark</button>
+								</div>
+								<div class="col-12 mt-5">
+									<button type="button" class="btn btn-round btn-outline-primary">Primary</button>
+									<button type="button" class="btn btn-round btn-outline-secondary">Secondary</button>
+									<button type="button" class="btn btn-round btn-outline-success">Success</button>
+									<button type="button" class="btn btn-round btn-outline-danger">Danger</button>
+									<button type="button" class="btn btn-round btn-outline-warning">Warning</button>
+									<button type="button" class="btn btn-round btn-outline-info">Info</button>
+									<button type="button" class="btn btn-round btn-outline-light">Light</button>
+									<button type="button" class="btn btn-round btn-outline-dark">Dark</button>
+								</div>
+							</div>
+
+							<div class="row mt-5">
+								<div class="col-12">
+									<h3 class="card-title mb-3">Hover No Round Button</h3>
+									<button type="button" class="btn btn-round btn-h-noround btn-primary">Primary</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-secondary">Secondary</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-success">Success</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-danger">Danger</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-warning">Warning</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-info">Info</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-light">Light</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-dark">Dark</button>
+								</div>
+								<div class="col-12 mt-5">
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-primary">Primary</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-secondary">Secondary</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-success">Success</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-danger">Danger</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-warning">Warning</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-info">Info</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-light">Light</button>
+									<button type="button" class="btn btn-round btn-h-noround btn-outline-dark">Dark</button>
+								</div>
+							</div>
+							<div class="col-12 mt-5">
+								<h3 class="card-title mb-3">Button Circle</h3>
+								<button type="button" class="btn btn-sm btn-circle-sm btn-outline-primary"><span class="icon-home li-icon"></span></button>
+								<button type="button" class="btn  btn-sm  btn-circle-sm btn-outline-secondary"><span class="icon-grid li-icon"></span></button>
+								<button type="button" class="btn   btn-sm btn-circle-sm btn-outline-success"><span class="icon-action-redo li-icon"></span></button>
+								<button type="button" class="btn  btn-sm  btn-circle-sm btn-outline-danger"><span class="icon-diamond li-icon"></span></button>
+								<button type="button" class="btn   btn-sm btn-circle-sm btn-outline-warning"><span class="icon-refresh li-icon"></span></button>
+								<button type="button" class="btn  btn-sm  btn-circle-sm btn-outline-info"><span class="icon-anchor li-icon"></span></button>
+
+								<button type="button" class="btn btn-circle btn-outline-primary"><span class="icon-home li-icon"></span></button>
+								<button type="button" class="btn   btn-circle btn-outline-secondary"><span class="icon-grid li-icon"></span></button>
+								<button type="button" class="btn   btn-circle btn-outline-success"><span class="icon-action-redo li-icon"></span></button>
+								<button type="button" class="btn   btn-circle btn-outline-danger"><span class="icon-diamond li-icon"></span></button>
+								<button type="button" class="btn   btn-circle btn-outline-warning"><span class="icon-refresh li-icon"></span></button>
+								<button type="button" class="btn   btn-circle btn-outline-info"><span class="icon-anchor li-icon"></span></button>
+
+								<button type="button" class="btn btn-circle-lg btn-outline-primary"><span class="icon-people li-icon"></span></button>
+								<button type="button" class="btn btn-circle-lg btn-outline-secondary"><span class="icon-pencil li-icon"></span></button>
+								<button type="button" class="btn btn-circle-lg btn-outline-success"><span class="icon-trash li-icon"></span></button>
+								<button type="button" class="btn btn-circle-lg btn-outline-danger"><span class="icon-drawer li-icon"></span></button>
+								<button type="button" class="btn btn-circle-lg btn-outline-warning"><span class="icon-screen-desktop li-icon"></span></button>
+								<button type="button" class="btn btn-circle-lg btn-outline-info"><span class="icon-disc li-icon"></span></button>
+							</div>
+
+							<div class="col-12 mt-5">
+								<button type="button" class="btn btn-outline-primary btn-round"> <span class="icon-home li-icon li-text-icon"></span>Home</button>
+								<button type="button" class="btn btn-primary btn-round"> <span class="icon-menu li-icon li-text-icon"></span>Menu</button>
+								<button type="button" class="btn btn-danger btn-round"> <span class="icon-heart li-icon li-text-icon align-middle"></span>Love</button>
+								<button type="button" class="btn btn-info btn-round"> <span class="icon-settings li-icon li-text-icon "></span>Settings</button>
+								<button type="button" class="btn btn-success"> <span class="icon-share li-icon li-text-icon"></span>Share</button>
+								<button type="button" class="btn btn-warning"> <span class="icon-tag li-icon li-text-icon"></span>Tag</button>
+							</div>
+							<div class="row mt-5">
+								<div class="col-12">
+									<button type="button" class="btn btn-primary btn-lg">Large button</button>
+									<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+									<button type="button" class="btn btn-primary btn-sm">Small button</button>
+									<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+									<hr>
+								</div>
+							</div>
+							<div class="col-12 mt-5">
+								<div class="row">
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-primary btn-lg btn-block">Block button</button>
+									</div>
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-secondary btn-lg btn-block">Block button</button>
+									</div>
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-warning btn-lg btn-block">Block button</button>
+									</div>
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-success btn-lg btn-block">Block button</button>
+									</div>
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-danger btn-lg btn-block">Block button</button>
+									</div>
+									<div class="col-sm-2">
+										<button type="button" class="btn btn-info btn-lg btn-block">Block button</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 mt-5">
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<button type="button" class="btn btn-secondary"><span class="icon-arrow-left"></span></button>
+									<button type="button" class="btn btn-secondary"><span class="icon-menu"></span></button>
+									<button type="button" class="btn btn-secondary"><span class="icon-arrow-right"></span></button>
+								</div>
+							</div>
+							<div class="col-12 mt-5">
+								<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+									<div class="btn-group mr-2" role="group" aria-label="First group">
+										<button type="button" class="btn btn-secondary">1</button>
+										<button type="button" class="btn btn-secondary">2</button>
+										<button type="button" class="btn btn-secondary">3</button>
+										<button type="button" class="btn btn-secondary">4</button>
+									</div>
+									<div class="btn-group mr-2" role="group" aria-label="Second group">
+										<button type="button" class="btn btn-secondary">5</button>
+										<button type="button" class="btn btn-secondary">6</button>
+										<button type="button" class="btn btn-secondary">7</button>
+									</div>
+									<div class="btn-group" role="group" aria-label="Third group">
+										<button type="button" class="btn btn-secondary">8</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 mt-5">
+								<h3 class="card-title mb-3">Button Link</h3>
+								<a href="#" class="btn btn-primary  active" role="button" aria-pressed="true">Primary link</a>
+								<a href="#" class="btn btn-secondary  active" role="button" aria-pressed="true">Secondary link</a>
+								<a href="#" class="btn btn-success  active" role="button" aria-pressed="true">Success link</a>
+								<a href="#" class="btn btn-danger  active" role="button" aria-pressed="true">Danger link</a>
+								<a href="#" class="btn btn-warning active" role="button" aria-pressed="true">Waring link</a>
+								<a href="#" class="btn btn-info  active" role="button" aria-pressed="true">Info link</a>
+							</div>
+
+							<div class="col-12 mt-5">
+								<h3 class="card-title mb-3">Disabled Button</h3>
+								<button type="button" class="btn btn-sm btn-primary" disabled="">Primary button</button>
+								<button type="button" class="btn btn-secondary btn-sm" disabled="">Button</button>
+							</div>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./dist/js/jquery.sparkline.js"></script>
+	<script src="./dist/js/purple.js"></script>
+</body>
+
+</html>

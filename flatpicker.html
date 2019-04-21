@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Purple Admin</title>
+	<link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="./dist/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="./node_modules/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="./dist/css/purple.min.css" />
+	<link rel="stylesheet" href="./dist/css/animate.css" />
+</head>
+
+<body class="fixed-topbar fixed-siebar">
+	<div class="page-wrapper">
+		<div class="topbar header shadow-sm animated" id="topbar">
+			<nav class="navbar navbar-expand">
+				<div class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link toggler" href="#" onclick="app.toggleSidebar(this)"><i class="fas fa-align-left"></i></a>
+						</li>
+					</ul>
+					<ul class="navbar-nav my-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu search-dropdown-box dropdown-menu-right border-0 shadow-sm" aria-labelledby="search-dropdown">
+								<div class="pl-3 pr-3 pt-2 pb-2">
+									<input type="search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="topbar-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+								<i class="icon-options-vertical"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topbar-dropdown">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Setting</a>
+								<a class="dropdown-item" href="#">
+									Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar animated">
+			<div class="sidebar-header">
+				<div class="logo">
+					<img src="./dist/img/man-256.png" alt="" class="img-circle logo-img" />
+				</div>
+				<div class="logo-txt">
+					<span class="site-title">Purple Admin</span>
+					<span class="site-subtitle">@LarMaySee</span>
+				</div>
+			</div>
+			<div class="divider-wrap">
+				<div class="divider"></div>
+			</div>
+			<div class="sidebar-content">
+				<ul class="sidebar-menu">
+					<li>
+						<a href="demo.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-tachometer-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="form.html">
+							<span class="menu-icon mr-3"><i class="fab fa-wpforms"></i></span>
+							<span class="hide-menu">
+								Form
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-cube"></i>
+							</span>
+							<span class="hide-menu">
+								Components
+							</span>
+							<span class="menu-icon float-right arrow">
+								<i class="fas fa-angle-right"></i>
+							</span>
+						</a>
+						<ul class="submenu">
+							<li class="nav-item">
+								<a href="alert.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Alert
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="badge.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Badge
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="button.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Button
+									</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="fontawesome.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-feather-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Fontawesome
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="simplelineicon.html">
+							<span class="menu-icon mr-3">
+								<i class="fab fa-pagelines"></i>
+							</span>
+							<span class="hide-menu">
+								Simpleline Icons
+							</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="flatpicker.html" class="active">
+							<span class="menu-icon mr-3">
+								<i class="far fa-calendar"></i>
+							</span>
+							<span class="hide-menu">
+								Flatpkr
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-lock"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-cog"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content animated" id="main-content">
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="card shadow-sm border-0 mb-3">
+						<div class="card-header">
+							<h3 class="card-title mb-0">
+								Flat Picker
+							</h3>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-6">
+									<table class="table table-borderless">
+										<tr>
+											<td>Date </td>
+											<td>
+												<input type="text" class="form-control basicFlatpickr" placeholder="Select date">
+											</td>
+										</tr>
+										<tr>
+											<td>Min date </td>
+											<td>
+												<input type="text" class="form-control minDate" placeholder="Select date">
+											</td>
+										</tr>
+										<tr>
+											<td>Max date </td>
+											<td>
+												<input type="text" class="form-control maxDate" placeholder="Select date">
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="col-6">
+									<table class="table table-borderless">
+										<tr>
+											<td>Date Time </td>
+											<td>
+												<input type="text" class="form-control dateTime" placeholder="Select date">
+											</td>
+										</tr>
+										<tr>
+											<td>Human Readable </td>
+											<td>
+												<input type="text" class="form-control readable" placeholder="Select date">
+											</td>
+										</tr>
+
+										<tr>
+											<td>Min Today </td>
+											<td>
+												<input type="text" class="form-control minToday" placeholder="Select date">
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="text-right">
+								<a href="https://flatpickr.js.org/examples/" target="_blank" class="btn btn-link">More options</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="card shadow-sm border-0 mb-3">
+						<div class="card-body">
+							<div class="col-md-6 offset-md-3">
+								<form action="">
+									<div class="form-group">
+										<label for="">Disable Specific date</label>
+										<input type="text" class="form-control disableDate" placeholder="Disable Date">
+									</div>
+
+									<div class="form-group">
+										<label for="">Disable Specific date</label>
+										<input type="text" class="form-control disableRange" placeholder="Disable Date">
+									</div>
+
+									<div class="form-group">
+										<label for="">Date Function</label>
+										<input type="text" class="pickfun form-control" placeholder="Disable fun">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./node_modules/flatpickr/dist/flatpickr.min.js"></script>
+	<script src="./dist/js/jquery.sparkline.js"></script>
+	<script src="./dist/js/purple.js"></script>
+</body>
+
+</html>

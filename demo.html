@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Purple Admin</title>
+	<link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="./dist/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="./dist/css/purple.min.css" />
+	<link rel="stylesheet" href="./dist/css/animate.css" />
+</head>
+
+<body class="fixed-topbar fixed-siebar">
+	<div class="page-wrapper">
+		<div class="topbar header shadow-sm animated" id="topbar">
+			<nav class="navbar navbar-expand">
+				<div class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link toggler" href="#" onclick="app.toggleSidebar(this)"><i class="fas fa-align-left"></i></a>
+						</li>
+					</ul>
+					<ul class="navbar-nav my-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu search-dropdown-box dropdown-menu-right border-0 shadow-sm" aria-labelledby="search-dropdown">
+								<div class="pl-3 pr-3 pt-2 pb-2">
+									<input type="search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="topbar-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+								<i class="icon-options-vertical"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topbar-dropdown">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Setting</a>
+								<a class="dropdown-item" href="#">
+									Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar animated">
+			<div class="sidebar-header">
+				<div class="logo">
+					<img src="./dist/img/man-256.png" alt="" class="img-circle logo-img" />
+				</div>
+				<div class="logo-txt">
+					<span class="site-title">Purple Admin</span>
+					<span class="site-subtitle">@LarMaySee</span>
+				</div>
+			</div>
+			<div class="divider-wrap">
+				<div class="divider"></div>
+			</div>
+			<div class="sidebar-content">
+				<ul class="sidebar-menu">
+					<li>
+						<a href="demo.html" class="active">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-tachometer-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="form.html">
+							<span class="menu-icon mr-3"><i class="fab fa-wpforms"></i></span>
+							<span class="hide-menu">
+								Form
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-cube"></i>
+							</span>
+							<span class="hide-menu">
+								Components
+							</span>
+							<span class="menu-icon float-right arrow">
+								<i class="fas fa-angle-right"></i>
+							</span>
+						</a>
+						<ul class="submenu">
+							<li class="nav-item">
+								<a href="alert.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Alert
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="badge.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Badge
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="button.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Button
+									</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="fontawesome.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-feather-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Fontawesome
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="simplelineicon.html">
+							<span class="menu-icon mr-3">
+								<i class="fab fa-pagelines"></i>
+							</span>
+							<span class="hide-menu">
+								Simpleline Icons
+							</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="flatpicker.html">
+							<span class="menu-icon mr-3">
+								<i class="far fa-calendar"></i>
+							</span>
+							<span class="hide-menu">
+								Flatpkr
+							</span>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-lock"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-cog"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content animated" id="main-content">
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="row ng-scope">
+						<div class="col-lg-3">
+							<!-- messager widget -->
+							<div class="card shadow-sm b-none mb-3">
+								<div class="i-s-widget i-s-row">
+									<div class="i-s-icon i-s-block bg-primary text-white">
+										<i class="fab fa-facebook-messenger icon-fa"></i>
+									</div>
+									<div class="i-s-block">
+										<div class="i-s-item">
+											<p class="b-name mb-0">Messenger</p>
+											<p class="b-value mb-0">200k</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<!-- snapchat -->
+							<div class="card shadow-sm b-none mb-3">
+								<div class="i-s-widget i-s-row">
+									<div class="i-s-icon i-s-block i-s-snapchat">
+										<i class="fab fa-snapchat-ghost icon-fa"></i>
+									</div>
+									<div class="i-s-block">
+										<div class="i-s-item">
+											<p class="b-name mb-0">Snapchat</p>
+											<p class="b-value mb-0">400k</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+							<!-- youtube -->
+							<div class="card shadow-sm b-none mb-3">
+								<div class="i-s-widget i-s-row">
+									<div class="i-s-block">
+										<div class="i-s-item">
+											<p class="b-name mb-0">Youtube</p>
+											<p class="b-value mb-0">200k</p>
+										</div>
+									</div>
+									<div class="i-s-icon i-s-block i-s-youtube">
+										<i class="fab fa-youtube icon-fa"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<!-- Inbox widget -->
+							<div class="card shadow-sm b-none mb-3">
+								<div class="i-s-widget i-s-row">
+									<div class="i-s-icon i-s-block bg-info text-white">
+										<i class="far fa-envelope  icon-fa"></i>
+									</div>
+									<div class="i-s-block">
+										<div class="i-s-item">
+											<p class="b-name mb-0">Inbox</p>
+											<p class="b-value mb-0">40,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+
+					<div class="row mb-3">
+						<div class="col-md-4">
+							<div class="card shadow-sm border-0">
+								<div class="card-body">
+									<div class="widget-header">
+										<h3 class="widget-title text-uppercase text-primary">
+											Primary sparkline
+										</h3>
+									</div>
+									<hr>
+									<div class="widget-middle">
+										<div class="d-flex justify-content-around mt-2 mb-3">
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">
+													5866%
+												</h5>
+											</div>
+											<div class="border-divider"></div>
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">
+													$1450
+												</h5>
+											</div>
+										</div>
+										<div class="sparkline-primary">3,2,4,2,5,4,6,4</div>
+									</div>
+									<hr>
+									<div class="widget-footer text-right">
+										<button class="btn btn-sm btn-link text-primary">Detail</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- /.col-4 -->
+						<div class="col-md-4">
+							<div class="card border-0 shadow-sm">
+								<div class="card-body">
+									<div class="widget-header">
+										<h3 class="widget-title text-uppercase text-success">
+											Success sparkline
+										</h3>
+									</div>
+									<hr>
+									<div class="widget-middle">
+										<div class="d-flex justify-content-around mt-2 mb-3">
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">$5866</h5>
+											</div>
+											<div class="border-divider"></div>
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">
+													$1030
+												</h5>
+											</div>
+										</div>
+										<div class="sparkline-success">1,2,1,4,3,4,2,1</div>
+									</div>
+									<hr>
+									<div class="widget-footer text-right">
+										<button class="btn btn-sm btn-link text-success">Detail</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.col-4 -->
+
+						<div class="col-md-4">
+							<div class="card shadow-sm border-0">
+								<div class="card-body">
+									<div class="widget-header">
+										<h3 class="widget-title text-uppercase text-info">
+											Info sparkline
+										</h3>
+									</div>
+									<hr>
+									<div class="widget-middle">
+										<div class="d-flex justify-content-around mt-2 mb-3">
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">$5866</h5>
+											</div>
+											<div class="border-divider"></div>
+											<div class="d-flex align-items-center">
+												<h5 class="mb-0 text-muted">
+													$1000
+												</h5>
+											</div>
+										</div>
+										<div class="sparkline-info">1,2,1,4,3,4,2,1</div>
+									</div>
+									<hr>
+									<div class="widget-footer text-right">
+										<button class="btn btn-sm btn-link text-info">Detail</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.col-4 -->
+					</div>
+					<!-- /.row -->
+
+					<div class="card border-0 shadow-sm mb-3">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th class="text-center">#</th>
+										<th>NAME</th>
+										<th>STATUS</th>
+										<th>DATE</th>
+										<th>PRICE</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center">1</td>
+										<td class="txt-oflo">Elite admin</td>
+										<td>
+											<span class="badge badge-success badge-pill">sale</span>
+										</td>
+										<td class="txt-oflo">April 18, 2017</td>
+										<td><span class="text-success">$24</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">2</td>
+										<td class="txt-oflo">Real Homes WP Theme</td>
+										<td>
+											<span class="badge badge-info badge-pill">extended</span>
+										</td>
+										<td class="txt-oflo">April 19, 2017</td>
+										<td><span class="text-info">$1250</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">3</td>
+										<td class="txt-oflo">Ample Admin</td>
+										<td>
+											<span class="badge badge-info badge-pill">extended</span>
+										</td>
+										<td class="txt-oflo">April 19, 2017</td>
+										<td><span class="text-info">$1250</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">4</td>
+										<td class="txt-oflo">Medical Pro WP Theme</td>
+										<td>
+											<span class="badge badge-danger badge-pill">tax</span>
+										</td>
+										<td class="txt-oflo">April 20, 2017</td>
+										<td><span class="text-danger">-$24</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">5</td>
+										<td class="txt-oflo">Hosting press html</td>
+										<td>
+											<span class="badge badge-success badge-pill">sale</span>
+										</td>
+										<td class="txt-oflo">April 21, 2017</td>
+										<td><span class="text-success">$24</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">6</td>
+										<td class="txt-oflo">Digital Agency PSD</td>
+										<td>
+											<span class="badge badge-success badge-pill">sale</span>
+										</td>
+										<td class="txt-oflo">April 23, 2017</td>
+										<td><span class="text-danger">-$14</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">7</td>
+										<td class="txt-oflo">Helping Hands WP Theme</td>
+										<td>
+											<span class="badge badge-warning badge-pill">member</span>
+										</td>
+										<td class="txt-oflo">April 22, 2017</td>
+										<td><span class="text-success">$64</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">8</td>
+										<td class="txt-oflo">Helping Hands WP Theme</td>
+										<td>
+											<span class="badge badge-warning badge-pill">member</span>
+										</td>
+										<td class="txt-oflo">April 22, 2017</td>
+										<td><span class="text-success">$64</span></td>
+									</tr>
+									<tr>
+										<td class="text-center">9</td>
+										<td class="txt-oflo">Ample Admin</td>
+										<td>
+											<span class="badge badge-info badge-pill">extended</span>
+										</td>
+										<td class="txt-oflo">April 19, 2017</td>
+										<td><span class="text-info">$1250</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- /.card -->
+
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="card border-0 shadow bg-info mb-3">
+										<div class="card-body">
+											<div class="r-s-v">
+												<span class="r-s-name">Count</span>
+												<span class="r-s-icon">
+													<i class="far fa-chart-bar"></i>
+												</span>
+												<span class="r-s-value">457,80</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="card border-0 shadow bg-danger mb-3">
+										<div class="card-body">
+											<div class="r-s-v">
+												<span class="r-s-name">Page View</span>
+												<span class="r-s-icon">
+													<i class="far fa-chart-bar"></i>
+												</span>
+												<span class="r-s-value">457,800</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="card border-0 shadow bg-success mb-3">
+										<div class="card-body">
+											<div class="r-s-v">
+												<span class="r-s-name">Visit</span>
+												<span class="r-s-icon">
+													<i class="far fa-chart-bar"></i>
+												</span>
+												<span class="r-s-value">457,80</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="card border-0 shadow bg-warning mb-3">
+										<div class="card-body">
+											<div class="r-s-v">
+												<span class="r-s-name">Page View</span>
+												<span class="r-s-icon">
+													<i class="far fa-chart-bar"></i>
+												</span>
+												<span class="r-s-value">457,800</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./dist/js/jquery.sparkline.js"></script>
+	<script src="./dist/js/purple.js"></script>
+</body>
+
+</html>

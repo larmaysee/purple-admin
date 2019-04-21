@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Purple Admin</title>
+	<link rel="stylesheet" href="./node_modules/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="./dist/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="./dist/css/purple.min.css" />
+	<link rel="stylesheet" href="./dist/css/animate.css" />
+</head>
+
+<body class="fixed-topbar fixed-siebar">
+	<div class="page-wrapper">
+		<div class="topbar header shadow-sm animated" id="topbar">
+			<nav class="navbar navbar-expand">
+				<div class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link toggler" href="#" onclick="app.toggleSidebar(this)"><i class="fas fa-align-left"></i></a>
+						</li>
+					</ul>
+					<ul class="navbar-nav my-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu search-dropdown-box dropdown-menu-right border-0 shadow-sm" aria-labelledby="search-dropdown">
+								<div class="pl-2 pr-2">
+									<input type="search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="topbar-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="icon-options-vertical"></i></a>
+							<div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topbar-dropdown">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Setting</a>
+								<a class="dropdown-item" href="#">
+									Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar animated">
+			<div class="sidebar-header">
+				<div class="logo">
+					<img src="./dist/img/man-256.png" alt="" class="img-circle logo-img" />
+				</div>
+				<div class="logo-txt">
+					<span class="site-title">Purple Admin</span>
+					<span class="site-subtitle">@LarMaySee</span>
+				</div>
+			</div>
+			<div class="divider-wrap">
+				<div class="divider"></div>
+			</div>
+			<div class="sidebar-content">
+				<ul class="sidebar-menu">
+					<li>
+						<a href="demo.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-tachometer-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="form.html" class="active">
+							<span class="menu-icon mr-3"><i class="fab fa-wpforms"></i></span>
+							<span class="hide-menu">
+								Form
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-cube"></i>
+							</span>
+							<span class="hide-menu">
+								Components
+							</span>
+							<span class="menu-icon float-right arrow">
+								<i class="fas fa-angle-right"></i>
+							</span>
+						</a>
+						<ul class="submenu">
+							<li class="nav-item">
+								<a href="alert.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Alert
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="badge.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Badge
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="button.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Button
+									</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="fontawesome.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-feather-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Fontawesome
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="simplelineicon.html">
+							<span class="menu-icon mr-3">
+								<i class="fab fa-pagelines"></i>
+							</span>
+							<span class="hide-menu">
+								Simpleline Icons
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="flatpicker.html">
+							<span class="menu-icon mr-3">
+								<i class="far fa-calendar"></i>
+							</span>
+							<span class="hide-menu">
+								Flatpkr
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-lock"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-cog"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content animated" id="main-content">
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="card border-0 shadow-sm mb-3">
+						<div class="card-header">
+							<h3 class="card-title mb-0">
+								Form Layout
+							</h3>
+						</div>
+						<div class="card-body">
+							<form action="">
+								<div class="row">
+									<div class="col-md-6">
+										<table class="table table-borderless">
+											<tr>
+												<td>Username</td>
+												<td>
+													<input type="text" class="form-control" placeholder="Username">
+												</td>
+											</tr>
+											<tr>
+												<td>Email</td>
+												<td>
+													<input type="email" class="form-control" placeholder="Username">
+												</td>
+											</tr>
+											<tr>
+												<td>Address</td>
+												<td>
+													<textarea name="address" id="" cols="30" rows="5" class="form-control" placeholder="address"></textarea>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="col-md-6">
+										<table class="table table-borderless">
+											<tr>
+												<td>
+													Zipcode
+												</td>
+												<td>
+													<input type="number" class="form-control" placeholder="Zipcode">
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Phone Number
+												</td>
+												<td>
+													<input type="number" class="form-control" placeholder="Phone number">
+												</td>
+											</tr>
+											<tr>
+												<td>
+													NRC
+												</td>
+												<td>
+													<input type="text" class="form-control" placeholder="NRC">
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Password
+												</td>
+												<td>
+													<input type="password" class="form-control" placeholder="Password">
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="col-md-12">
+										<div class="text-right">
+											<button class="btn btn-secondary">Cancel</button>
+											<button class="btn btn-primary">Submit</button>
+										</div>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+					<!-- /.card -->
+					<div class="row mb-3">
+						<div class="col-lg-7 mb-3">
+							<div class="card border-0 shadow-sm">
+								<div class="card-header">
+									<h3 class="card-title mb-0">
+										Register
+									</h3>
+								</div>
+								<div class="card-body">
+									<form action="">
+										<table class="table table-borderless">
+											<tr>
+												<td class="text-right">Name </td>
+												<td class="text-left"><input type="text" class="form-control" placeholder="Name"> </td>
+											</tr>
+											<tr>
+												<td class="text-right">Email </td>
+												<td class="text-left"><input type="email" class="form-control" placeholder="Email"> </td>
+											</tr>
+											<tr>
+												<td class="text-right">Password </td>
+												<td class="text-left"><input type="password" class="form-control" placeholder="Password"> </td>
+											</tr>
+											<tr>
+												<td class="text-right">Confirm Password </td>
+												<td class="text-left"><input type="password" class="form-control" placeholder="Confirm password">
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" class="text-right">
+													<button type="submit" class="btn btn-primary">Register</button>
+												</td>
+											</tr>
+										</table>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="card shadow-sm border-0 pb-2">
+								<div class="card-body">
+									<h3 class="card-title text-center mt-5">Login</h3>
+									<p class="text-muted card-subtitle text-center mb-3">Please enter your credentials.</p>
+									<div class="pl-5 pr-5 pt-3 pb-3">
+										<form action="">
+											<div class="form-group">
+												<div class="input-group mb-3">
+													<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username">
+													<div class="input-group-append">
+														<span class="input-group-text" id="username"><i class="far fa-envelope"></i></span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="input-group mb-3">
+													<input type="text" class="form-control" placeholder="Password" aria-label="password" aria-describedby="password">
+													<div class="input-group-append">
+														<span class="input-group-text" id="password"><i class="fas fa-lock"></i></span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<button class="btn btn-primary btn-block text-uppercase">Login</button>
+											</div>
+										</form>
+										<p class="mb-0">
+											<a href="#">Forgot password?</a>
+										</p>
+										<p>
+											<a href="#">Don't have account? Create new one.</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+
+				</div>
+				<!-- /.container-fluid -->
+			</div>
+			<!-- /.content-wrapper -->
+		</div>
+		<!-- /.content -->
+	</div>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./dist/js/jquery.sparkline.js"></script>
+	<script src="./dist/js/purple.js"></script>
+</body>
+
+</html>
