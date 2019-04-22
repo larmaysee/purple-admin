@@ -127,4 +127,3 @@ $('.sidebar-menu li a').on('click', function(e) {
 
 // call sparkline
 app.sparkline();
-app.flatpickr();
