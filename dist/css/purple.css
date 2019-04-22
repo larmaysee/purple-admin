@@ -10110,7 +10110,7 @@ button[class^=btn-outline-] {
   background-color: #e9e9d9;
 }
 
-.table th {
+.table.th-bt-0 thead th {
   border-top: none;
 }
 
