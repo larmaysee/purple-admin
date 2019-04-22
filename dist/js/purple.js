@@ -106,6 +106,9 @@ var app = {
 				"firstDayOfWeek": 1 // start week on Monday
 			}
 		});
+	},
+	responsive: function() {
+
 	}
 };
 
@@ -127,3 +130,19 @@ $('.sidebar-menu li a').on('click', function(e) {
 
 // call sparkline
 app.sparkline();
+
+// window resize
+$(document).ready(function() {
+	$(window).resize(function() {
+		var width = $(document).width();
+		if (width <= 767) {
+			$('#topbar').addClass('hideSidebar');
+			$('#main-content').addClass('hideSidebar');
+			$('.sidebar').addClass('slideOutLeft').removeClass('slideInLeft');
+		} else {
+			$('#topbar').removeClass('hideSidebar');
+			$('#main-content').removeClass('hideSidebar');
+			$('.sidebar').removeClass('slideOutLeft').addClass('slideInLeft');
+		}
+	});
+});
