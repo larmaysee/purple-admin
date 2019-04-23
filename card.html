@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Purple Admin</title>
+	<link rel="stylesheet" href="./dist/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="./dist/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="./dist/css/purple.min.css" />
+	<link rel="stylesheet" href="./dist/css/animate.css" />
+</head>
+
+<body class="fixed-topbar fixed-siebar">
+	<div class="page-wrapper">
+		<div class="topbar header shadow-sm animated" id="topbar">
+			<nav class="navbar navbar-expand">
+				<div class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link toggler" href="#" onclick="app.toggleSidebar(this)"><i class="fas fa-align-left"></i></a>
+						</li>
+					</ul>
+					<ul class="navbar-nav my-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu search-dropdown-box dropdown-menu-right border-0 shadow-sm" aria-labelledby="search-dropdown">
+								<div class="pl-3 pr-3 pt-2 pb-2">
+									<input type="search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="topbar-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+								<i class="icon-options-vertical"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topbar-dropdown">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Setting</a>
+								<a class="dropdown-item" href="#">
+									Logout
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar animated">
+			<div class="sidebar-header">
+				<div class="logo">
+					<img src="./dist/img/man-256.png" alt="" class="img-circle logo-img" />
+				</div>
+				<div class="logo-txt">
+					<span class="site-title">Purple Admin</span>
+					<span class="site-subtitle">@LarMaySee</span>
+				</div>
+			</div>
+			<div class="divider-wrap">
+				<div class="divider"></div>
+			</div>
+			<div class="sidebar-content">
+				<ul class="sidebar-menu">
+					<li>
+						<a href="demo.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-tachometer-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="form.html">
+							<span class="menu-icon mr-3"><i class="fab fa-wpforms"></i></span>
+							<span class="hide-menu">
+								Form
+							</span>
+						</a>
+					</li>
+					<li class="selected">
+						<a href="#">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-cube"></i>
+							</span>
+							<span class="hide-menu">
+								Components
+							</span>
+							<span class="menu-icon float-right arrow">
+								<i class="fas fa-angle-right"></i>
+							</span>
+						</a>
+						<ul class="submenu">
+							<li class="nav-item">
+								<a href="alert.html" class="nav-link">
+									<span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Alert
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="badge.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Badge
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="button.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-cube"></i>
+									</span>
+									<span class="hide-menu">
+										Button
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="card.html" class="nav-link active"><span class="menu-icon mr-3">
+										<i class="fas fa-square"></i>
+									</span>
+									<span class="hide-menu">
+										Card
+									</span></a>
+							</li>
+							<li class="nav-item">
+								<a href="tables.html" class="nav-link"><span class="menu-icon mr-3">
+										<i class="fas fa-table"></i>
+									</span>
+									<span class="hide-menu">
+										Tables
+									</span></a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="fontawesome.html">
+							<span class="menu-icon mr-3">
+								<i class="fas fa-feather-alt"></i>
+							</span>
+							<span class="hide-menu">
+								Fontawesome
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="simplelineicon.html">
+							<span class="menu-icon mr-3">
+								<i class="fab fa-pagelines"></i>
+							</span>
+							<span class="hide-menu">
+								Simpleline Icons
+							</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="flatpicker.html">
+							<span class="menu-icon mr-3">
+								<i class="far fa-calendar"></i>
+							</span>
+							<span class="hide-menu">
+								Flatpkr
+							</span>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-lock"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-cog"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content animated" id="main-content">
+			<div class="content-wrapper">
+				<div class="container-fluid">
+					<div class="card-columns">
+						<div class="card border-0 shadow-sm">
+							<img src="./dist/img/flowers-402094_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title that wraps to a new line</h5>
+								<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+						<div class="card border-0 shadow-sm p-3">
+							<blockquote class="blockquote mb-0 card-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+								<footer class="blockquote-footer">
+									<small class="text-muted">
+										Someone famous in <cite title="Source Title">Source Title</cite>
+									</small>
+								</footer>
+							</blockquote>
+						</div>
+						<div class="card border-0 shadow-sm">
+							<img src="./dist/img/marriage-168831_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							</div>
+						</div>
+						<div class="card border-0 shadow-sm bg-primary text-white text-center p-3">
+							<blockquote class="blockquote mb-0">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+								<footer class="blockquote-footer text-white">
+									<small>
+										Someone famous in <cite title="Source Title">Source Title</cite>
+									</small>
+								</footer>
+							</blockquote>
+						</div>
+						<div class="card border-0 shadow-sm text-center">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							</div>
+						</div>
+						<div class="card border-0 shadow-sm">
+							<img src="./dist/img/lavender-1507499_1920.jpg" class="card-img-top" alt="...">
+						</div>
+						<div class="card border-0 shadow-sm p-3 text-right">
+							<blockquote class="blockquote mb-0">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+								<footer class="blockquote-footer">
+									<small class="text-muted">
+										Someone famous in <cite title="Source Title">Source Title</cite>
+									</small>
+								</footer>
+							</blockquote>
+						</div>
+						<div class="card border-0 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							</div>
+						</div>
+					</div>
+					<!-- /.card-columns -->
+					<div class="card-deck mb-3">
+						<div class="card">
+							<img src="./dist/img/marriage-168831_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./dist/img/flowers-402094_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./dist/img/lavender-1507499_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<!-- /.card-deck -->
+					<div class="card-group mb-3">
+						<div class="card">
+							<img src="./dist/img/texture-2110023_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./dist/img/marriage-168831_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./dist/img/flowers-402094_1920.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<!-- /.card-group -->
+					<div class="card border-0 shadow-sm mb-3">
+						<div class="row no-gutters">
+							<div class="col-md-4">
+								<img src="./dist/img/texture-2110023_1920.jpg" class="card-img" alt="...">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./dist/js/common.min.js"></script>
+	<script src="./dist/js/jquery.sparkline.js"></script>
+	<script src="./dist/js/purple.js"></script>
+</body>
+
+</html>
