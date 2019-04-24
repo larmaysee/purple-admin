@@ -1,8 +1,10 @@
 // custom
 @import "purple-admin-variables";
+@import "mixins";
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "style";
 @import "button";
 @import "widget";
 @import "table";
 @import "card";
+@import "badge";
